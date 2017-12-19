@@ -1,0 +1,13 @@
+﻿a {
+    cursor: pointer;
+}
+
+.position-calendar-icon {
+    position: absolute;
+    right: 50px;
+    margin-top: -33px;
+}
+
+.remove-bold {
+    font-weight: normal;
+}

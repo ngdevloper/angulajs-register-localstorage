@@ -1,0 +1,30 @@
+﻿<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<h3>All registered users:</h3>
+
+<div class="row" id="userList" ng-if="vm.allUsers.length != 0">
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Date of birth</th>
+            <th>Gender</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in vm.allUsers track by $index">
+            <td>{{ user.firstName + ' ' + user.lastName}}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.mobile }}</td>
+            <td>{{ user.dob | date: 'MM/dd/yyyy' }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.country }}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p><a ng-click="vm.logOut()" class="btn btn-primary">Logout</a></p>
